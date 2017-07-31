@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         this.mViewHolder.editValue = (EditText) findViewById(R.id.edit_value);
-        this.mViewHolder.textDollar = (TextView) findViewById(R.id.edit_value);
-        this.mViewHolder.textEuro = (TextView) findViewById(R.id.edit_value);
+        this.mViewHolder.textDollar = (TextView) findViewById(R.id.text_dolar);
+        this.mViewHolder.textEuro = (TextView) findViewById(R.id.text_euro);
         this.mViewHolder.buttonCalculate = (Button) findViewById(R.id.button_calculate);
 
         this.mViewHolder.buttonCalculate.setOnClickListener(this);
@@ -36,15 +36,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private void clearValues(){
+        this.mViewHolder.textDollar.setText("");
+        this.mViewHolder.textEuro.setText("");
+    }
+
     private static class ViewHolder{
         EditText editValue;
         TextView textDollar;
         TextView textEuro;
         Button buttonCalculate;
-    }
-
-    private void clearValues(){
-        this.mViewHolder.textDollar.setText("");
-        this.mViewHolder.textEuro.setText("");
     }
 }
