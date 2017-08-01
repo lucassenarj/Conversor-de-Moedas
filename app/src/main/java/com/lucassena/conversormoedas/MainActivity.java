@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = view.getId();
         if(id == R.id.button_calculate){
             Double value = Double.valueOf(this.mViewHolder.editValue.getText().toString());
-            this.mViewHolder.textDollar.setText(String.format("%.2f", value * 3.15));
-            this.mViewHolder.textEuro.setText(String.format("%.2f", value * 4.20));
+            this.mViewHolder.textDollar.setText(String.format("%.2f", value * 3));
+            this.mViewHolder.textEuro.setText(String.format("%.2f", value * 4));
         }
     }
 
